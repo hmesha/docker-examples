@@ -10,7 +10,12 @@ RUN mkdir /usr/local/software
 RUN wget https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
 RUN tar -xvzf apache-maven-3.3.9-bin.tar.gz
 RUN mv apache-maven-3.3.9 /usr/local/software
+
 ENV M2_HOME=/usr/local/software/apache-maven-3.3.9
+ENV JAVA_HOME=/usr/java/jdk1.8.0_112
 ENV PATH=$M2_HOME/bin:$PATH
 RUN echo "`mvn -v`"
+
+RUN echo "JAVA_HOME=$JAVA_HOME"
+RUN echo "M2_HOME=$M2_HOME"
 
