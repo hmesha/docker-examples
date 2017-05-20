@@ -33,9 +33,14 @@ COPY context.xml /opt/tomcat/webapps/manager/META-INF/context.xml
 COPY tomcat.service /etc/systemd/system
 RUN systemctl enable tomcat
 
+RUN mkdir -p /usr/apps
+VOLUME ["/usr/apps"]
+
+COPY start.sh .
+RUN chmod +x start.sh
 EXPOSE 8080
 
 # To correctly start D-Bus, it should be the fist service - https://forums.docker.com/t/any-simple-and-safe-way-to-start-services-on-centos7-systemd/5695/8
-CMD ["/usr/sbin/init"]
+CMD ["./start.sh"]
 
 
