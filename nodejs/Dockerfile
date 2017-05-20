@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhel7/rhel:latest
+FROM centos:latest
 RUN curl --silent --location https://rpm.nodesource.com/setup | bash -
 RUN yum -y install nodejs
 
