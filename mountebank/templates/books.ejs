@@ -1,0 +1,28 @@
+{
+  "port": 5000,
+  "protocol": "http",
+  "stubs": [{
+    "responses": [{
+        "is": {
+          "body": [{
+            "author": "J.K. Rowling",
+            "title": "Harry Potter and Chambers of Secret"
+          },
+          {
+            "author": "Chetan Bhagat",
+            "title": "Five Point Someone"
+          }]
+        }
+      }],
+    "predicates": [{
+      "and": [
+        {
+          "equals": {
+            "path": "/books",
+            "method": "GET"
+          }
+        }
+      ]
+    }]
+  }]
+}
