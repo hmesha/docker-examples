@@ -6,17 +6,6 @@ Sonar server would be accessible at [http://localhost:9000](http://localhost:900
 
 **Note:** These steps are for macOS. 
 
-## Prerequisites
-Create directory on host machine as follows to mount it on Docker container as persistent volume. This will be used to mount sonarqube data 
-directory.
-
-```
-sudo mkdir -p /var/docker-volumes/sonarqube
-sudo chmod 777 /var/docker-volumes/
-mkdir -p /var/docker-volumes/sonarqube/data
-mkdir -p /var/docker-volumes/sonarqube/temp
-```
-
 ## Embedded Databse
 ### Build Image
 

@@ -5,3 +5,4 @@
 - `nodejs-base` : Docker container having `nodejs` on top of `centos`
 - `nodejs-example` : Uses `nodejs-base` as base image and enhances further to start `nodejs` server on start-up, exposing simple `GET` endpoint
 - `mountebank` : Uses `nodejs-base` as base image and installs `mountebank` on top of that. Refer `README` within the project for more details.
+- `sonarqube` : Uses `java-maven-base` as base image and installs `sonarqube` on top of that. It supports H2 and MySQL databse. Refer `README` within the project for more details.
