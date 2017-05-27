@@ -14,7 +14,7 @@ Sonar server would be accessible at [http://localhost:9000](http://localhost:900
 ### Run Image
 
 ```
-docker run -d -p 9000:9000 \
+docker run -d --rm -p 9000:9000 \
     -v sonarqube-data-h2:/opt/sonarqube/data \
     -v sonarqube-conf-h2:/opt/sonarqube/conf \
     -v sonarqube-extensions-h2:/opt/sonarqube/extensions \
@@ -46,7 +46,7 @@ sudo ifconfig lo0 alias 172.16.123.1
 ```
 
 ```
-docker run -d -p 9000:9000 \
+docker run -d --rm -p 9000:9000 \
     -v sonarqube-data-mysql:/opt/sonarqube/data \
     -v sonarqube-conf-mysql:/opt/sonarqube/conf \
     -v sonarqube-extensions-mysql:/opt/sonarqube/extensions \
